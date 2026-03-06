@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassordGenerator</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="hero">
+        <h1>PassordGenerator</h1>
+        <p>Generer et sterkt passord direkte og lokalt i nettleseren. Ingen data lagres.</p>
+    </header>
+
+
+    <!-- Main content -->
+    <main>
+
+        <!-- Generator Section -->
+        <section class="generator">
+            <div class="card">
+
+                <h2>Generator</h2>
+
+                <!-- Password display -->
+                <div class="password-box">
+                    <span id="password" class="placeholder">—</span>
+
+                    <div class="password-actions">
+                        <button id="togglePassword">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+
+                        <button id="copyBtn">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Strength indicator -->
+                <div class="strength">
+                    <span id="strength">–</span>
+
+                    <div class="strength-bar">
+                        <div id="strengthBar"></div>
+                    </div>
+
+                    <span id="entropy">0 bits</span>
+                </div>
+
+
+                <!-- Length slider -->
+                <label for="lengthSlider">Lengde</label>
+
+                <div class="slider-row">
+                    <input id="lengthSlider" type="range" min="6" max="36" value="16">
+                    <span id="lengthValue">16</span>
+                </div>
+
+
+                <!-- Options -->
+                <div class="options">
+                    <label>
+                        <input type="checkbox" id="lowercase" checked>
+                        Små bokstaver
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="uppercase" checked>
+                        Store bokstaver
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="numbers" checked>
+                        Tall
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="symbols" checked>
+                        Symboler
+                    </label>
+                </div>
+
+
+                <!-- Generate button -->
+                <button id="generateBtn">
+                    <i class="fa-solid fa-rotate"></i>
+                    Generer passord
+                </button>
+
+                <p id="copyMessage"></p>
+
+            </div>
+        </section>
+
+
+        <!-- Info Section -->
+        <section class="info">
+            <div class="info-card">
+
+                <h2>Sikkerhetstips</h2>
+
+                <ul class="tips">
+                    <li>Bruk unike passord for hver konto</li>
+                    <li>Aldri del passord med andre</li>
+                    <li>Unngå personlige navn, steder, datoer osv.</li>
+                    <li>Oppdater passord regelmessig</li>
+                    <li>Vurder å bruke en passordmanager</li>
+                </ul>
+
+            </div>
+        </section>
+
+    </main>
+
+
+   
+    <footer>
+        <p>© 2026 PassordGenerator</p>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+
+</body>
+</html>

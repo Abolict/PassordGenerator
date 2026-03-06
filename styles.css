@@ -1,0 +1,294 @@
+/* =========================
+   Global reset
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   Body / layout
+========================= */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f7f6;
+    color: #1f2937;
+
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================
+   Hero header
+========================= */
+
+.hero {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #16a34a;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    opacity: 0.8;
+    max-width: 420px;
+}
+
+
+/* =========================
+   Generator section
+========================= */
+
+.generator {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e5e7eb;
+
+    padding: 30px;
+    border-radius: 14px;
+
+    width: 420px; /* fast bredde */
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+
+
+
+.password-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+
+    padding: 10px 12px;
+    margin-bottom: 15px;
+
+    font-family: 'JetBrains Mono', monospace;
+    height: 48px;
+}
+
+#password {
+    flex: 1;
+    min-width: 0;
+
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+#password::-webkit-scrollbar {
+    display: none;
+}
+
+.password-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.password-actions button {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: none;
+    border: none;
+
+    color: #6b7280;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.password-actions button:hover {
+    color: #16a34a;
+}
+
+
+
+
+.strength {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.strength-bar {
+    flex: 1;
+
+    height: 8px;
+    background: #e5e7eb;
+
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#strengthBar {
+    height: 100%;
+    width: 0%;
+
+    background: #16a34a;
+    transition: width 0.4s;
+}
+
+
+
+
+.slider-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+input[type="range"] {
+    flex: 1;
+    accent-color: #16a34a;
+}
+
+
+
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.options input {
+    accent-color: #16a34a;
+}
+
+
+/* =========================
+   Generate button
+========================= */
+
+#generateBtn {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #16a34a;
+    color: white;
+
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#generateBtn:hover {
+    background: #15803d;
+}
+
+#copyMessage {
+    margin-top: 10px;
+    color: #16a34a;
+}
+
+
+/* =========================
+   Info section
+========================= */
+
+.info {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    padding: 0 20px;
+
+    margin-top: 60px;
+}
+
+.info-card {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+
+    border-radius: 12px;
+    padding: 20px;
+
+    width: 420px;
+}
+
+
+/* =========================
+   Tips list
+========================= */
+
+.tips {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tips li {
+    margin-bottom: 8px;
+
+    position: relative;
+    padding-left: 16px;
+}
+
+.tips li::before {
+    content: "•";
+
+    position: absolute;
+    left: 0;
+
+    color: #16a34a;
+}
+
+
+
+
+footer {
+    margin-top: 60px;
+    opacity: 0.6;
+}
+
+
+
+
+.placeholder {
+    opacity: 0.4;
+    font-style: italic;
+}
