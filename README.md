@@ -44,3 +44,6 @@ størrelsen på tegnsettet som brukes
 Dette gir en indikasjon på hvor vanskelig passordet er å brute-force.
 
 -----------------------------------------------------------------------------------
+
+## License
+MIT
