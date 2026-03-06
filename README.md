@@ -1,4 +1,4 @@
-- PassordGenerator
+PassordGenerator
 
 En simpel men sikker passordgenerator som kjører 100% lokalt i nettleseren.
 Ingen data lagres eller sendes til server, alt genereres direkte i JavaScript.
